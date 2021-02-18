@@ -1,0 +1,23 @@
+{% extends 'checkin/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-2" >
+        <div class="card card-body">
+        <form action="" method="POST" >
+            {% csrf_token %}
+            {% for form in form %}
+            {{form.label}}
+            {{form}}
+            <hr>
+            {% endfor %}
+            
+            
+            
+            <input type="submit" name="submit">
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
